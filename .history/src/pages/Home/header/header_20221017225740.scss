@@ -1,0 +1,259 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  transition: transform .2s linear;
+
+  &__scroled {
+    position: fixed;
+    background: rgba(197, 241, 219, 0.8);
+    backdrop-filter: blur(9.5px);
+    animation-name: headerAnim;
+    animation-duration: .3s;
+  }
+
+  .wrapper {
+    @include ipadProScreen {
+     padding: 0;
+     overflow: visible;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    position: relative;
+    @include ipadProScreen {
+      align-items: unset;
+      position: relative;
+      height: 7vh;
+    }
+  }
+
+  &__logo {
+    font-weight: 600;
+    font-size: 38px;
+    background: linear-gradient(132.36deg, #098761 -46.2%, #A0DEBF 119.56%);
+    background-clip: text;
+    padding: 8px 0 0 20px;
+    color: color(dark);
+  }
+
+  $gray: #343436;
+  $not-black-but-dark: #1c1b20;
+  $silver: #f8f8f8;
+
+  .menu__container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		z-index: -5;
+		opacity: 0;
+		transition: opacity 1500ms;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+
+		.menu-wrapper {
+			list-style: none;
+			li {
+				margin: 10px 0;
+				//background-color: lightblue;
+				display: flex;
+				justify-content: left;
+
+				a {
+					text-decoration: none;
+					letter-spacing: 5px;
+					font-weight: 700;
+					font-size: 15vmin;
+					color: rgba(255, 255, 255, 0);
+					-webkit-text-stroke: 1.4px $gray;
+					transition-duration: 200ms;
+
+					&:hover {
+						color: $gray;
+						-webkit-text-stroke: 0px $gray;
+					}
+				}
+
+				span {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+
+					font-size: 68vmin;
+					font-weight: 900;
+					color: rgba(0, 0, 0, 0.2);
+				}
+			}
+		}
+
+		.menu-underlay {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			background-color: lightblue;
+		}
+
+		&.active {
+			transition-delay: 00ms;
+			opacity: 1;
+			z-index: 5;
+		}
+	}
+
+
+  // &__links li:nth-child(1) {
+  //   transition: all 0.3s ease 0.2s; 
+  // }
+  // &__links li:nth-child(2) {
+  //   transition: all 0.3s ease 0.4s; 
+  // }
+  // &__links li:nth-child(3) {
+  //   transition: all 0.3s ease 0.6s; 
+  // }
+  // &__links li.fade{
+  //   opacity: 1;
+  // }
+  
+  &__links {
+    display: flex;
+    align-items: center;
+    @include ipadProScreen {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+    }
+
+    li {
+      margin-left: 45px;
+      position: relative;
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        background-color: color(green);
+        height: 2px;
+        width: 0%;
+        bottom: -7px;
+        left: 50%;
+        position: absolute;
+        -webkit-transition: width .3s ease-in-out;
+        -moz--transition: width .3s ease-in-out;
+        transition: width .3s ease-in-out;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+
+      &:hover {
+        a {
+          color: color(green);
+        }
+
+        &:after {
+          width: 100%;
+        }
+      }
+
+      @include ipadProScreen {
+        margin-left: 0;
+      }
+    }
+
+    a {
+      color: color(dark);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      transition: all 0.3s;
+      @include ipadProScreen {
+        color: color(white);
+        z-index: 10;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    @include ipadProScreen {
+      display: block;
+      width: 20px;
+      height: 16px;
+      position: absolute;
+      cursor: pointer;
+      right: 15px;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+    }
+
+    &.active {
+      .line-1 {
+        transform: rotate(-45deg) translate(-4px, 4px);
+        background: color(white);
+      }
+      .line-3 {
+        transform: rotate(45deg) translate(-5px,-5px);
+        background: color(white);
+      }
+      .line-2 {
+        opacity: 0;
+        visibility: hidden;
+        background: color(white);
+      }
+    }
+  }
+  
+  &__burger-line {
+    width: 100%;
+    height: 1.5px;
+    background: color(white);
+    transition: all .3s;
+    @include ipadProScreen {
+      background: color(dark);
+    }
+  }
+
+  .line-2 {
+    margin: 5px 0;
+  }
+
+  &__button {
+    @include ipadProScreen {
+      display: none;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  @keyframes headerAnim {
+    from {
+      opacity: 0;
+      top: -50px;
+    }
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  
+}

@@ -1,0 +1,36 @@
+.footer {
+  background: #77B093; 
+  padding: 50px 0;
+
+  &__container {
+  }
+  
+  &__items {
+  }
+  
+  &__item {
+
+    .logo {
+      font-weight: 600;
+      font-size: 38px;
+      padding: 8px 0 0 20px;
+      color: color(white);
+    }
+  }
+  
+  &__location {
+  }
+  
+  &__services {
+  }
+  
+  &__nav {
+  }
+  
+  .contacts__mail {
+  }
+  
+  .telegram {
+  }
+}
+

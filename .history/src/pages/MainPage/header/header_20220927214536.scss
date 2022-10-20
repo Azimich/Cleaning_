@@ -1,0 +1,148 @@
+.header {
+  background: #5b78c7;
+
+  nav {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 61px;
+    background: linear-gradient(132.36deg, #098761 -46.2%, #A0DEBF 119.56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hamburger {
+    z-index: 2;
+  }
+
+  // .line {
+  // }
+
+  // .line-1 {
+  // }
+
+  // .line-2 {
+  // }
+
+  // .line-3 {
+  // }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      margin: 0 0 0 20px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  }
+
+  .landing {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      margin: 100px;
+      font-size: 50px;
+      color: #ae5fce;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .line {
+      width: 30px;
+      height: 2px;
+      background: #fff;
+      margin: 5px;
+      transition: all 0.3s;
+    }
+  
+    nav {
+      position: relative;
+    }
+  
+    .hamburger {
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+    }
+  
+     .hamburger.active .line-1 {
+      transform: rotate(-45deg) translate(-7px, 7px)
+    }
+  
+     .hamburger.active .line-3 {
+      transform: rotate(45deg) translate(-3px,-3px);
+    }
+  
+     .hamburger.active .line-2 {
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    .nav-links {
+      position: fixed;
+      background: #5b78c7;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(100px at 90% -10%);
+      -webkit-clip-path: circle(100px at 90% -10%);
+      transition: all 0.8s ease-in-out;
+      pointer-events: none;
+    }
+  
+    .nav-links.open {
+      clip-path: circle(1100px at 90% -10%);
+      -webkit-clip-path: circle(1100px at 90% -10%);
+      pointer-events: all;
+    }
+  
+    .landing {
+      flex-direction: column;
+    }
+  
+    .nav-links li {
+      opacity: 0;
+    }
+  
+    .nav-links li a {
+      font-size: 25px;
+    }
+  
+    .nav-links li:nth-child(1) {
+      transition: all 0.3s ease 0.2s; 
+    }
+
+    .nav-links li:nth-child(2) {
+      transition: all 0.3s ease 0.4s; 
+    }
+
+    .nav-links li:nth-child(3) {
+      transition: all 0.3s ease 0.6s; 
+    }
+
+    .nav-links li.fade{
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.projects {
+
+ 
+  &__container {
+  }
+  
+  &__swiper {
+  }
+  
+  &__swiper-wrapper {
+  }
+  
+  &__swiper-slide {
+    padding: 2% 15%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  &__swiper-img {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  &__swiper-info {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+
+    h4, p {
+      color: color(white);
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    letter-spacing: 0.025em;
+    }
+  }
+  
+  &__button {
+    position: relative;
+    padding: 19px 30px;
+    transition: all .2s ease;
+    text-decoration: none;
+    color: inherit;
+    margin: 100px auto; 
+
+    @media (min-width: 1200px) {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 28px;
+        background: color(lightgreen);
+        width: 56px;
+        height: 56px;
+        transition: all .3s ease;
+      }
+  
+      &:hover {
+        &:before {
+          width: 100%;
+          background: color(lightgreen); 
+        }
+        svg {
+          transform: translateX(0);
+        }
+      }
+
+      &:active {
+        transform: scale(.96);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      background: color(lightgreen);
+      border-radius: 28px;
+    }
+  }
+  
+  
+  span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    vertical-align: middle;
+    color: color(dark);
+  }
+
+  svg {
+    position: relative;
+    top: 1px;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: color(dark);
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all .3s ease;
+  }
+
+  .swiper-pagination {
+  }
+  .swiper-button-prev {
+  }
+  .swiper-button-next {
+  }
+}
+

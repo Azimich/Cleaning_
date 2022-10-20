@@ -1,0 +1,59 @@
+.rates {
+  margin-top: 130px;
+
+  &__container {
+    h1 {
+      width: 35%;
+    }
+  }
+  
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+  
+  &__item {
+  }
+  
+  &__item-title {
+    background: #3A7059;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+    h3 {
+      font-weight: 300;
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: color(white);
+    }
+  }
+  
+  &__item-info {
+  }
+  
+  &__item-paragraph {
+    display: flex;
+    align-items: center;
+
+    span {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+
+    p {
+
+    }
+  }
+  
+  &__item-price {
+  }
+}
+
+

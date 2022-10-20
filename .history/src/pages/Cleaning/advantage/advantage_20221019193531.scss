@@ -1,0 +1,24 @@
+.advantage {
+  margin-bottom: 100px;
+
+  &__container {
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 32.5%;
+  }
+
+  &__icon {
+  }
+
+  &__item-info {
+  }
+  
+}
+

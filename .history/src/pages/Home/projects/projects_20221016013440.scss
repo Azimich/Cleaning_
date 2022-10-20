@@ -1,0 +1,201 @@
+.projects {
+  margin-top: 130px;
+ 
+  &__container {
+    h1 {
+      width: 45%;
+    }
+  }
+  
+  &__swiper {
+
+    .slide__mobile {
+      display: none;
+
+      @media (max-width: 1260px) {
+        display: block;
+      }
+    }
+
+    .slide__pc {
+      display: block;
+
+      @media (max-width: 1260px) {
+        display: none;
+      }
+    }
+  }
+  
+  &__swiper-slide {
+    padding: 2% 15% 4% 15%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @media (max-width: 1260px) {
+      padding: 2% 10% 3% 10%;
+    }
+  }
+  
+  &__swiper-img {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    @media (max-width: 560px) {
+      height: 340px;
+
+      img {
+        object-fit: cover;
+      }
+    } 
+  }
+  
+  &__swiper-info {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+
+    @include ipadScreen {
+      left: 4%;
+      top: 8%;
+    }
+
+    @media (max-width: 560px) {
+      left: 4%;
+      top: 18%;
+    }
+
+    h4, p {
+      color: color(white);
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      @media (max-width: 560px) {
+       display: none;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 145%;
+      letter-spacing: 0.025em;
+      max-width: 500px;
+      margin-bottom: 30px;
+      @media (max-width: 1260px) {
+        max-width: 100%;
+      }
+
+      @media (max-width: 560px) {
+        display: none;
+      }
+    }
+  }
+  
+  &__button {
+    position: relative;
+    padding: 19px 30px;
+    transition: all .2s ease;
+    text-decoration: none;
+    color: inherit;
+    margin: 100px auto; 
+    @media (min-width: 1200px) {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 28px;
+        background: #77B093;
+        width: 56px;
+        height: 56px;
+        transition: all .3s ease;
+      }
+
+      @media (max-width: 560px) {
+        display: none;
+      }
+  
+      &:hover {
+        &:before {
+          width: 100%;
+          background: #77B093; 
+        }
+        svg {
+          transform: translateX(0);
+        }
+      }
+
+      &:active {
+        transform: scale(.96);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      background: #77B093;
+      border-radius: 28px;
+    }
+  }
+  
+  
+  span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    vertical-align: middle;
+    color: color(white);
+  }
+
+  svg {
+    position: relative;
+    top: 1px;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: color(white);
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all .3s ease;
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    background-color: color(green);
+
+    @include phoneScreen {
+      font-size: 12px;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next::after {
+    color: #15BD6D;
+    font-size: 35px;
+    position: absolute;
+  }
+
+  @include phoneScreen {
+    .swiper-button-prev:after,
+    .swiper-button-next::after {
+      display: none;
+    }
+  }
+}
+

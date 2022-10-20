@@ -1,0 +1,37 @@
+.advantage {
+  margin-bottom: 100px;
+
+  &__container {
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 32.5%;
+    display: flex;
+    align-items: center;
+    /* Rectangle 1724 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #F5FFFB;
+border-radius: 10px;
+
+  }
+
+  &__icon {
+  }
+
+  &__item-info {
+  }
+  
+}
+

@@ -1,0 +1,147 @@
+.contact {
+  margin: 130px auto;
+
+  &__container {
+    h1 {
+      width: 35%;
+      @include ipadProScreen {
+        width: 100%;
+        font-size: 35px;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include ipadProScreen {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+
+  } 
+
+  &__item__info {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 278px;
+      line-height: 155%;
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      color: color(green);
+      transition: all 0.3s;
+      &:hover {
+        color: color(dark);
+        path {
+          fill: #212121;
+        }
+      }
+  
+      svg {
+        margin-right: 6px;
+        width: 20px;
+        height: 20px;
+        transition: all 0.3s; 
+        path {
+          fill: #15BD6D;
+        }
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__map-container {
+    width: 70%;
+    height: 528px;
+
+    @include ipadProScreen {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      order: -1;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  [class*="copyrights-pane"] {
+    display: none !important;
+  }
+
+  .ballon {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 22%;
+      background-image: url('../assets/images/ofis.svg');
+      @include backgroundImage(cover);
+      width: 50px;
+      height: 50px;
+    }
+
+    b {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 14px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: color(dark);
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.02em;
+      color: #666666;
+    }
+  }
+
+  .baloon__address {
+    padding-left: 40px;
+  }
+
+  .ymaps-2-1-79-balloon {
+    position: absolute;
+    z-index: 1;
+    border-radius: 12px !important;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.25);
+  }
+
+  .ymaps-2-1-79-balloon__layout {
+    border-radius: 12px;
+  }
+}

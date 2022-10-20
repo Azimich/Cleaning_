@@ -1,0 +1,42 @@
+.footer {
+  background: #77B093; 
+  padding: 50px 0;
+
+  &__container {
+  }
+  
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 20%;
+
+    .logo {
+      font-weight: 600;
+      font-size: 38px;
+      color: color(white);
+    }
+  }
+  
+  &__location {
+  }
+  
+  &__services {
+  }
+  
+  &__nav {
+  }
+  
+  .contacts__mail {
+  }
+  
+  .telegram {
+  }
+}
+

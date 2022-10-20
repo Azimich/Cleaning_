@@ -1,0 +1,27 @@
+.services {
+
+  &__container {
+
+    h1 {
+      
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+
+  &__item {
+  }
+
+  &__item-animation {
+  }
+
+  &__item-images {
+  }
+
+  &__item-info {
+  }
+}

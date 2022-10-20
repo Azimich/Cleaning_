@@ -1,0 +1,88 @@
+.footer {
+  background: #77B093; 
+  padding: 50px 0;
+
+  &__container {
+  }
+  
+  &__items {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+
+    p {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.02em;
+      color: color(white);
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 38px;
+      color: color(white);
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: color(white);
+    }
+  }
+  
+  &__location {
+    p {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 145%;
+      letter-spacing: 0.025em;
+      color: color(white);
+
+      svg {
+        width: 45px;
+        height: 45px;
+        margin-right: 6px;
+      }
+    }
+  }
+  
+  &__services,
+  &__nav {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: color(white);
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  
+  .contacts__mail {
+    font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.02em;
+  }
+  
+  .telegram {
+  }
+
+  .button-1 {
+    color: color(white);
+    border-color: color(white);
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}
+

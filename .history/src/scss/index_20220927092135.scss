@@ -1,0 +1,20 @@
+
+
+//Глобальные css & mixins
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';
+@import '../../node_modules/@fancyapps/ui/dist/fancybox.css';
+@import '../../node_modules/swiper/swiper-bundle.css';
+@import '../../node_modules/video.js/src/css/video-js.scss';
+@import '../../node_modules/video.js/dist/video-js.min.css';
+@import '../../node_modules/swiper/swiper.scss';
+@import './utils/variables';
+@import './utils/_mixins';
+@import './utils/_global';
+
+//Стили главной страницы сайта
+@import '../pages/MainPage/header/header';
+@import '../pages/MainPage/banner/banner';
+@import '../pages/MainPage/about/about';
+@import '../pages/MainPage/news/news';
+@import '../pages/MainPage/gallery/gallery';
+@import '../pages/MainPage/footer/footer';

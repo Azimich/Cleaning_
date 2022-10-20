@@ -1,0 +1,155 @@
+.contacts {
+  margin-top: 130px;
+
+  &__container {
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__form-container {
+    width: 46%;
+
+    h2 {
+      margin-bottom: 5px;
+      color: color(dark);
+    }
+
+    p {
+      margin-bottom: 25px;
+    }
+  }
+
+  form {
+    width: 100%;
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus {
+      transition: background-color 600000s 0s, color 600000s 0s;
+    }
+
+  }
+  .placeholder-form {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px auto;
+  }
+  .placeholder-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .placeholder-container input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid color(lightgreen);
+    padding: 10px 20px 10px 10px;
+  }
+  .placeholder-container label {  
+    font-size: 16px;
+    line-height: 16px;
+    padding: 5px 5px;
+    pointer-events: none;
+    position: absolute;
+    transition: all 200ms;
+    transform: translateY(-35px) scale(1);
+    left: 0px;
+  }
+  .placeholder-container input:focus + label,
+  .placeholder-container input:not(:placeholder-shown) + label{
+    transform: translateY(-55px) scale(0.8);
+    opacity: 0.8;
+    left: 0;
+  }
+
+  textarea {
+    width: 100%;
+    height: 130px;
+    background: #E1F9ED;
+    border: 2px solid color(lightgreen);
+    border-radius: 8px;
+    padding: 12px 0 0 12px;
+    margin-bottom: 20px;
+    transition: all 0.2s;
+    &::placeholder {
+      text-transform: uppercase;
+      color: #5A5A5A;
+      font-size: 12px;
+    }
+    &:focus {
+      background-color: #fff;
+      border-color: transparent;
+    }
+  }
+
+
+  &__map-container {
+    width: 49%;
+    height: 500px;
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  [class*="copyrights-pane"] {
+    display: none !important;
+  }
+
+  .ballon {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 22%;
+      background-image: url('../assets/images/ofis.svg');
+      @include backgroundImage(cover);
+      width: 50px;
+      height: 50px;
+    }
+
+    b {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 14px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: color(dark);
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.02em;
+      color: #666666;
+    }
+  }
+
+  .baloon__address {
+    padding-left: 40px;
+  }
+
+  .ymaps-2-1-79-balloon {
+    position: absolute;
+    z-index: 1;
+    border-radius: 12px !important;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.25);
+  }
+
+  .ymaps-2-1-79-balloon__layout {
+    border-radius: 12px;
+  }
+}

@@ -1,0 +1,36 @@
+.rate {
+
+  &__items {
+  }
+  
+  &__item {
+  }
+  
+  &__item__info {
+    span {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #3A7059;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    
+      @media (max-width: 820px) {
+        width: 26px;
+        height: 26px;
+      }
+    
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  
+  &__item__price {
+  }
+}
+
+

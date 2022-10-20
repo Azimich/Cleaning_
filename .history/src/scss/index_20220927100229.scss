@@ -1,0 +1,15 @@
+
+//Глобальные css & mixins
+@import '../../node_modules/swiper/swiper-bundle.css';
+@import '../../node_modules/swiper/swiper.scss';
+@import './utils/variables';
+@import './utils/_mixins';
+@import './utils/_global';
+
+//Стили главной страницы сайта
+@import '../pages/MainPage/header/header';
+@import '../pages/MainPage/banner/banner';
+@import '../pages/MainPage/about/about';
+@import '../pages/MainPage/services/services';
+@import '../pages/MainPage/projects/';
+@import '../pages/MainPage/footer/footer';

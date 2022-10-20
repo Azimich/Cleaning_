@@ -1,0 +1,223 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  transition: transform .2s linear;
+
+  &__scroled {
+    position: fixed;
+    background: rgba(197, 241, 219, 0.8);
+    backdrop-filter: blur(9.5px);
+    animation-name: headerAnim;
+    animation-duration: .3s;
+  }
+
+  .wrapper {
+    @include ipadProScreen {
+     padding: 0;
+     overflow: visible;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    position: relative;
+    @include ipadProScreen {
+      align-items: center;
+      height: 6.5vh;
+    }
+  }
+
+  &__logo {
+    font-weight: 600;
+    font-size: 30px;
+    background: linear-gradient(132.36deg, #098761 -46.2%, #A0DEBF 119.56%);
+    background-clip: text;
+    padding: 0 0 0 20px;
+    color: color(dark);
+  }
+
+  @include ipadProScreen {
+    .menu__container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      z-index: -5;
+      opacity: 0;
+      transition: opacity 1000ms;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+  
+      &.active {
+        transition: all 0s;
+        opacity: 1;
+        z-index: 5;
+        pointer-events: auto;
+      }
+    }
+  }
+  
+  .overlay {
+    position: fixed;
+    top: -90%;
+    right: -5%;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: #48888b;
+    transition: all 700ms;
+    z-index: 1;
+
+		&.active {
+			transform: scale(120, 100);
+		}
+	}
+  
+  &__links {
+    display: flex;
+    align-items: center;
+    @include ipadProScreen {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+    }
+
+    li {
+      margin-left: 45px;
+      position: relative;
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        background-color: color(green);
+        height: 2px;
+        width: 0%;
+        bottom: -7px;
+        left: 50%;
+        position: absolute;
+        -webkit-transition: width .3s ease-in-out;
+        -moz--transition: width .3s ease-in-out;
+        transition: width .3s ease-in-out;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+        @include ipadProScreen {
+          background-color: color(white);
+        }
+      }
+
+      &:hover {
+        a {
+          color: color(green);
+          @include ipadProScreen {
+            color: color(white);
+          }
+        }
+
+        &:after {
+          width: 100%;
+        }
+      }
+
+      @include ipadProScreen {
+        margin: 0 0 80px 0;
+      }
+    }
+
+    a {
+      color: color(dark);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      transition: all 0.3s;
+      @include ipadProScreen {
+        color: color(white);
+        z-index: 10;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    @include ipadProScreen {
+      display: block;
+      width: 20px;
+      height: 16px;
+      cursor: pointer;
+      z-index: 99;
+      margin: 0 10px 0 0;
+    }
+
+    &.active {
+      .line-1 {
+        transform: rotate(-45deg) translate(-4.8px, 4px);
+        background: color(white);
+      }
+      .line-3 {
+        transform: rotate(45deg) translate(-5px, -4.6px);
+        background: color(white);
+      }
+      .line-2 {
+        opacity: 0;
+        visibility: hidden;
+        background: color(white);
+      }
+    }
+  }
+  
+  &__burger-line {
+    width: 100%;
+    height: 1.5px;
+    background: color(white);
+    transition: all .3s;
+    border-radius: 5px;
+    transition: color 1000ms;
+    transition: all 0.3s;
+    @include ipadProScreen {
+      background: color(dark);
+    }
+  }
+
+  .line-2 {
+    margin: 5px 0;
+  }
+
+  &__button {
+    @include ipadProScreen {
+      display: none;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  @keyframes headerAnim {
+    from {
+      opacity: 0;
+      top: -50px;
+    }
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  
+}

@@ -1,0 +1,39 @@
+.footer {
+  background: #77B093; 
+  padding: 50px 0;
+
+  &__container {
+  }
+  
+  &__items {
+  }
+  
+  &__item {
+
+    .logo {
+      font-weight: 600;
+      font-size: 38px;
+      background: linear-gradient(132.36deg, #098761 -46.2%, #A0DEBF 119.56%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      padding: 8px 0 0 20px;
+      color: color(wh);
+    }
+  }
+  
+  &__location {
+  }
+  
+  &__services {
+  }
+  
+  &__nav {
+  }
+  
+  .contacts__mail {
+  }
+  
+  .telegram {
+  }
+}
+

@@ -1,0 +1,41 @@
+.projects {
+
+ 
+  &__container {
+  }
+  
+  &__swiper {
+  }
+  
+  &__swiper-wrapper {
+  }
+  
+  &__swiper-slide {
+    padding: 15%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  &__swiper-img {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  &__swiper-info {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+  }
+  
+  &__button {
+  }
+  
+  .swiper-pagination {
+  }
+  .swiper-button-prev {
+  }
+  .swiper-button-next {
+  }
+}
+

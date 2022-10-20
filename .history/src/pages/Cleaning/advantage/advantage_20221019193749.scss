@@ -1,0 +1,31 @@
+.advantage {
+  margin-bottom: 100px;
+
+  &__container {
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 32.5%;
+    display: flex;
+    align-items: center;
+    background: #F5FFFB;
+    border-radius: 10px;
+    transition: all 0.3s;
+
+    &:hover 
+  }
+
+  &__icon {
+  }
+
+  &__item-info {
+  }
+  
+}
+

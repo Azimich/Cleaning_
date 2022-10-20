@@ -1,0 +1,272 @@
+.contacts {
+  margin-top: 130px;
+
+  &__container {
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__form {
+    width: 49%;
+
+    h2 {
+      margin-bottom: 5px;
+      color: color(dark);
+    }
+
+    p {
+      margin-bottom: 25px;
+    }
+
+    form {
+      width: 100%;
+
+      .name,
+      .mail,
+      .phone {
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid color(lightgreen);
+        padding: 8px;
+        margin-bottom: 20px;
+        transition: all 0.2s;
+
+        &::placeholder {
+          text-transform: uppercase;
+          color: #5A5A5A;
+          font-size: 12px;
+        }
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:focus {
+        transition: background-color 600000s 0s, color 600000s 0s;
+      }
+
+      textarea {
+        width: 100%;
+        height: 130px;
+        background: #E1F9ED;
+        border: 2px solid color(lightgreen);
+        border-radius: 8px;
+        padding: 12px 0 0 12px;
+        margin-bottom: 20px;
+        transition: all 0.2s;
+
+        &::placeholder {
+          text-transform: uppercase;
+          color: #5A5A5A;
+          font-size: 12px;
+        }
+
+        &:focus {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .map {
+    background-color: #569878;
+    border-radius: 15px;
+    width: 600px;
+    height: 500px;
+  }
+
+  [class*="]
+
+  &__button {
+    position: relative;
+    padding: 19px 30px;
+    transition: all .2s ease;
+    text-decoration: none;
+    color: inherit;
+    margin: 30px auto 0 0;
+    cursor: pointer;
+
+    @media (min-width: 1200px) {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 28px;
+        background: color(lightgreen);
+        width: 56px;
+        height: 56px;
+        transition: all .3s ease;
+      }
+  
+      &:hover {
+        &:before {
+          width: 100%;
+          background: color(lightgreen); 
+        }
+        svg {
+          transform: translateX(0);
+        }
+      }
+      &:active {
+        transform: scale(.96);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      background: color(lightgreen);
+      border-radius: 28px;
+    }
+
+    span {
+      position: relative;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 500;
+      vertical-align: middle;
+      color: color(dark);
+    }
+  
+    svg {
+      position: relative;
+      top: 1px;
+      margin-left: 10px;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke: color(dark);
+      stroke-width: 2;
+      transform: translateX(-5px);
+      transition: all .3s ease;
+    }
+  }
+
+  &__label-checkbox {
+    --background: #fff;
+    --background: #fff;
+    --border: #D1D6EE;
+    --border-hover: #BBC1E1;
+    --border-active: #15BD6D;
+    --tick: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 135%;      
+      letter-spacing: 0.025em;
+      color: #5A5A5A;
+      margin: 2px 0 0 6px;
+    }
+
+    a {
+      position: relative;
+      color: color(green);
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 100%;
+        background-color: color(green);
+      }
+    }
+
+    input,
+    svg {
+      width: 21px;
+      height: 21px;
+      display: block;
+    }
+
+    input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      position: relative;
+      outline: none;
+      background: var(--background);
+      border: none;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: box-shadow .3s;
+      box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+      &:hover {
+        --s: 2px;
+        --b: var(--border-hover);
+      }
+      &:checked {
+        --b: var(--border-active);
+      }
+    }
+
+    svg {
+      pointer-events: none;
+      fill: none;
+      stroke-width: 2px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke: var(--stroke, var(--border-active));
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 21px;
+      height: 21px;
+      transform: scale(var(--scale, 1)) translateZ(0);
+    }
+
+    &.path {
+      input {
+        &:checked {
+          --s: 2px;
+          transition-delay: .4s;
+          & + svg {
+            --a: 16.1 86.12;
+            --o: 102.22;
+          }
+        }
+      }
+      svg {
+        stroke-dasharray: var(--a, 86.12);
+        stroke-dashoffset: var(--o, 86.12);
+        transition: stroke-dasharray .6s, stroke-dashoffset .6s;
+      }
+    }
+    &.bounce {
+      --stroke: var(--tick);
+      input {
+        &:checked {
+          --s: 11px;
+          & + svg {
+            animation: bounce .4s linear forwards .2s;
+          }
+        }
+      }
+      svg {
+        --scale: 0;
+      }
+    }
+}
+
+  @keyframes bounce {
+    50% {
+      transform: scale(1.2);
+    }
+    75% {
+      transform: scale(.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}

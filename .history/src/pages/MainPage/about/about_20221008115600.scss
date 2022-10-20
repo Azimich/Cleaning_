@@ -1,0 +1,51 @@
+.about {
+  margin-top: 130px;
+
+  &__container {
+
+    h1 {
+      
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__images {
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  &__info {
+    width: 50%;
+  }
+  
+  &__bottom-info {
+  }
+
+  &__swiper {
+  }
+
+  &__swiper-wrapper {
+  }
+
+  &__swiper-slide {
+  }
+
+  &__swiper-img {
+  }
+
+  &__swiper-info {
+  }
+
+  &__swiper-next {
+  }
+
+  &__swiper-prev {
+  }
+
+  &__swiper-pagination {
+  }
+}

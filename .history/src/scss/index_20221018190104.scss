@@ -1,0 +1,24 @@
+
+//Глобальные css & mixins
+@import '../../node_modules/swiper/swiper-bundle.css';
+@import '../../node_modules/swiper/swiper.scss';
+@import './utils/variables';
+@import './utils/_mixins';
+@import './utils/_global';
+
+//Стили главной страницы сайта
+@import '../pages/Home/header/header';
+@import '../pages/Home/banner/banner';
+@import '../pages/Home/about/about';
+@import '../pages/Home/services/services';
+@import '../pages/Home/projects/projects';
+@import '../pages/Home/rates//rates';
+@import '../pages/Home/contacts/contacts';
+@import '../pages/Home/footer/footer';
+
+//Стили страницы Клининг
+@import '../pages/Home/banner/banner';
+@import '../pages/Home/about/about';
+@import '../pages/Home/services/services';
+@import '../pages/Home/projects/projects';
+@import '../pages/Home/contacts/contacts';
